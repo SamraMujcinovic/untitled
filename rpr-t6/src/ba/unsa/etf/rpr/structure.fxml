@@ -25,7 +25,7 @@
             <GridPane hgap="5.0" vgap="5.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
-                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES"  />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints vgrow="SOMETIMES" />
@@ -128,7 +128,7 @@
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
-                  <ColumnConstraints hgrow="ALWAYS" />
+                  <ColumnConstraints hgrow="ALWAYS"  />
                </columnConstraints>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -250,7 +250,7 @@
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
-                  <ColumnConstraints fillWidth="false" hgrow="ALWAYS" />
+                  <ColumnConstraints fillWidth="false" hgrow="ALWAYS"  />
                </columnConstraints>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
