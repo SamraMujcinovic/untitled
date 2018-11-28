@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import java.net.URL?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
+<BorderPane id="body" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.Controller">
    <center>
       <GridPane hgap="10.0" vgap="10.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -26,9 +26,9 @@
           <RowConstraints maxHeight="1.7976931348623157E308" valignment="CENTER" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-            <TitledPane alignment="CENTER" collapsible="false" mnemonicParsing="true" text="Podaci o studiju" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <TitledPane  alignment="CENTER" collapsible="false" mnemonicParsing="true" text="Podaci o studiju" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <content>
-                  <GridPane fx:id="grid3" hgap="5.0" layoutX="10.0" layoutY="10.0" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                  <GridPane id="pane1" hgap="5.0" layoutX="10.0" layoutY="10.0" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <children>
                         <Label text="Odsjek" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <GridPane.margin>
@@ -128,9 +128,9 @@
                 <RowConstraints vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TitledPane alignment="CENTER" collapsible="false" text="Detaljni lični podaci" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                  <TitledPane  alignment="CENTER" collapsible="false" text="Detaljni lični podaci" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <content>
-                        <GridPane fx:id="grid4" hgap="5.0" layoutX="222.0" layoutY="10.0" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <GridPane id="pane3" hgap="5.0" layoutX="222.0" layoutY="10.0" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <children>
                               <Label text="JMBG" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                                  <GridPane.margin>
@@ -205,7 +205,7 @@
                   </TitledPane>
                   <TitledPane alignment="CENTER" collapsible="false" text="Kontakt podaci" GridPane.rowIndex="1">
                      <content>
-                        <GridPane fx:id="grid2" hgap="5.0" layoutX="10.0" layoutY="90.0" vgap="5.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <GridPane id="pane4"  hgap="5.0" layoutX="10.0" layoutY="90.0" vgap="5.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <children>
                               <Label text="Kontakt adresa" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                                  <GridPane.margin>
@@ -295,7 +295,7 @@
    <top>
       <TitledPane alignment="CENTER" collapsible="false" text="Osnovni podaci">
          <content>
-            <GridPane hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <GridPane id = "pane2" hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

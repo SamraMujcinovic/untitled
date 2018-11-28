@@ -17,3 +17,24 @@
     -fx-border-width: 2;
     -fx-border-radius: 10px;
 }
+
+#body{
+    -fx-background-color: #00cc99;
+}
+
+#pane2{
+    -fx-background-color: linear-gradient(to bottom right,#80ced9  35%, #33cccc 70%,#00ccff 100%);
+}
+
+#pane3{
+    -fx-background-color: linear-gradient(to bottom right,#80cee1  35%, #33cccc 70%,#00ccff 100%);
+}
+
+#pane4{
+    -fx-background-color: linear-gradient(to bottom right,#80cee4  35%, #33cccc 70%,#00ccff 100%);
+}
+
+#pane1{
+    -fx-background-color: linear-gradient(to bottom right,#80cee7  35%, #33cccc 70%,#00ccff 100%);
+}
+
