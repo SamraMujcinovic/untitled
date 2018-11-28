@@ -140,7 +140,7 @@
                 <RowConstraints vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TitledPane alignment="CENTER" collapsible="false" text="Detaljni lični podaci" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                  <TitledPane  alignment="CENTER" collapsible="false" text="Detaljni lični podaci" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <content>
                         <GridPane id="pane3" hgap="5.0" layoutX="222.0" layoutY="10.0" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <children>

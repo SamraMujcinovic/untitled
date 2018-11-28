@@ -18,23 +18,32 @@
     -fx-border-radius: 10px;
 }
 
+.titled-pane > .title
+{
+    -fx-background-color: lightblue,lightblue, #00796B;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+    -fx-padding: 0.166667em 0.833333em 0.25em 0.833333em; /* 2 10 3 10 */
+}
+
+
 #body{
-    -fx-background-color: #00cc99;
+    -fx-background-color: #009688;
 }
 
 #pane2{
-    -fx-background-color: linear-gradient(to bottom right,#80ced9  35%, #33cccc 70%,#00ccff 100%);
+    -fx-background-color: #FFFFFF;
 }
 
 #pane3{
-    -fx-background-color: linear-gradient(to bottom right,#80cee1  35%, #33cccc 70%,#00ccff 100%);
+    -fx-background-color: #FFFFFF;
 }
 
 #pane4{
-    -fx-background-color: linear-gradient(to bottom right,#80cee4  35%, #33cccc 70%,#00ccff 100%);
+    -fx-background-color: #FFFFFF;
 }
 
 #pane1{
-    -fx-background-color: linear-gradient(to bottom right,#80cee7  35%, #33cccc 70%,#00ccff 100%);
+    -fx-background-color: #FFFFFF;
 }
 
