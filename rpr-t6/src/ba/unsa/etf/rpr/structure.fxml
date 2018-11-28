@@ -26,7 +26,7 @@
           <RowConstraints maxHeight="1.7976931348623157E308" valignment="CENTER" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-            <TitledPane  alignment="CENTER" collapsible="false" mnemonicParsing="true" text="Podaci o studiju" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <TitledPane alignment="CENTER" collapsible="false" mnemonicParsing="true" text="Podaci o studiju" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <content>
                   <GridPane id="pane1" hgap="5.0" layoutX="10.0" layoutY="10.0" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <children>
@@ -35,14 +35,6 @@
                               <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <GridPane.margin>
-                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                           </GridPane.margin>
-                        </TextField>
                         <Label text="Godina studija" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -51,14 +43,6 @@
                               <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <GridPane.margin>
-                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                           </GridPane.margin>
-                        </TextField>
                         <Label text="Ciklus studija" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -67,14 +51,6 @@
                               <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <GridPane.margin>
-                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-                           </GridPane.margin>
-                        </TextField>
                         <Label text="Status studenta" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.rowSpan="2" GridPane.valignment="CENTER" />
                         <RadioButton mnemonicParsing="false" text="redovan" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
                            <padding>
@@ -89,11 +65,47 @@
                               <Insets left="10.0" />
                            </padding>
                         </RadioButton>
-                        <CheckBox mnemonicParsing="false" text="pripada posebnim boračkim kategorijama" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+                        <CheckBox fx:id="cBox" mnemonicParsing="false" text="pripada posebnim boračkim kategorijama" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="5">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </CheckBox>
+                        <MenuButton contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </MenuButton>
+                        <MenuButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </MenuButton>
+                        <MenuButton alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                           <GridPane.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </MenuButton>
                      </children>
                      <columnConstraints>
                         <ColumnConstraints hgrow="ALWAYS" minWidth="-Infinity" />
@@ -128,7 +140,7 @@
                 <RowConstraints vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <TitledPane  alignment="CENTER" collapsible="false" text="Detaljni lični podaci" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                  <TitledPane alignment="CENTER" collapsible="false" text="Detaljni lični podaci" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
                      <content>
                         <GridPane id="pane3" hgap="5.0" layoutX="222.0" layoutY="10.0" vgap="5.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <children>
@@ -169,18 +181,14 @@
                                     <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                                  </GridPane.margin>
                               </Label>
-                              <MenuButton alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                                <items>
-                                  <MenuItem mnemonicParsing="false" text="Action 1" />
-                                  <MenuItem mnemonicParsing="false" text="Action 2" />
-                                </items>
-                                 <padding>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </padding>
+                              <ComboBox editable="true" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                                  <GridPane.margin>
                                     <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
                                  </GridPane.margin>
-                              </MenuButton>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </ComboBox>
                            </children>
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
@@ -205,7 +213,7 @@
                   </TitledPane>
                   <TitledPane alignment="CENTER" collapsible="false" text="Kontakt podaci" GridPane.rowIndex="1">
                      <content>
-                        <GridPane id="pane4"  hgap="5.0" layoutX="10.0" layoutY="90.0" vgap="5.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                        <GridPane id="pane4" hgap="5.0" layoutX="10.0" layoutY="90.0" vgap="5.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                            <children>
                               <Label text="Kontakt adresa" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                                  <GridPane.margin>
@@ -283,7 +291,7 @@
         <URL value="@style.css" />
     </stylesheets>
    <bottom>
-      <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Potvrdi" BorderPane.alignment="CENTER">
+      <Button fx:id="evaluateBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Potvrdi" BorderPane.alignment="CENTER">
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
@@ -295,7 +303,7 @@
    <top>
       <TitledPane alignment="CENTER" collapsible="false" text="Osnovni podaci">
          <content>
-            <GridPane id = "pane2" hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
+            <GridPane id="pane2" hgap="5.0" vgap="5.0" BorderPane.alignment="CENTER">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -308,7 +316,7 @@
                <children>
                   <TitledPane alignment="CENTER" collapsible="false" text="Ime" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <content>
-                        <TextField GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                        <TextField fx:id="name" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -326,7 +334,7 @@
                   </TitledPane>
                   <TitledPane alignment="CENTER" collapsible="false" text="Prezime" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <content>
-                        <TextField GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                        <TextField fx:id="surname" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -344,7 +352,7 @@
                   </TitledPane>
                   <TitledPane alignment="CENTER" collapsible="false" text="Broj indeksa" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                      <content>
-                        <TextField GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                        <TextField fx:id="index" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
