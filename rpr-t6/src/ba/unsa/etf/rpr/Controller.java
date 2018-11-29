@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -62,13 +64,18 @@ public class Controller implements Initializable {
 
 
     public Boolean isValidJmbgDatePlace(String jmbg, String date, String place){
-        if(jmbg==null || date==null  ||jmbg.length()!=13 || jmbg.matches("\\D+") || !date.matches("[0-3][0-9].[0-1][0-9].[0-2][0-9][0-9][0-9]") || jmbg.charAt(0)!=date.charAt(0) || jmbg.charAt(1)!=date.charAt(1) ||
-                jmbg.charAt(2)!=date.charAt(3) || jmbg.charAt(3)!=date.charAt(4) ||
-                jmbg.charAt(4)!=date.charAt(7) || jmbg.charAt(5)!=date.charAt(8) ||
-                jmbg.charAt(6)!=date.charAt(9) ) return false;
-        else {
-            return true;
-        }
+
+            if( jmbg.matches("\\d{13}$")){
+                ArrayList<Integer> numbers=new ArrayList<>();
+                for(int i=0;i<13;i++){
+                    numbers.add(Integer.parseInt(String.valueOf(jmbg.charAt(i))));
+                }
+                    //DDMMGGGRRBBBK = ABVGDĐEŽZIJKL
+                    //L = 11 - (( 7*(A+E) + 6*(B+Ž) + 5*(V+Z) + 4*(G+I) + 3*(D+J) + 2*(Đ+K) ) % 11)
+                return numbers.get(12)==11-((7*(numbers.get(0)+numbers.get(6))+6*(numbers.get(1)+numbers.get(7))
+                        +5*(numbers.get(2)+numbers.get(8))+4*(numbers.get(3)+numbers.get(9))+3*(numbers.get(4)+numbers.get(10))+2*(numbers.get(5)+numbers.get(11)) )%11 );
+            }
+            return false;
     }
 
     public String getFirstName(){
