@@ -60,13 +60,22 @@ public class Controller implements Initializable {
         return firstName;
     }
 
+
+    public Boolean isValidJmbgDatePlace(String jmbg, String date, String place){
+        if(jmbg==null || date==null  ||jmbg.length()!=13 || jmbg.matches("\\D+") || !date.matches("[0-3][0-9].[0-1][0-9].[0-2][0-9][0-9][0-9]") || jmbg.charAt(0)!=date.charAt(0) || jmbg.charAt(1)!=date.charAt(1) ||
+                jmbg.charAt(2)!=date.charAt(3) || jmbg.charAt(3)!=date.charAt(4) ||
+                jmbg.charAt(4)!=date.charAt(7) || jmbg.charAt(5)!=date.charAt(8) ||
+                jmbg.charAt(6)!=date.charAt(9) ) return false;
+        else {
+            return true;
+        }
+    }
+
     public String getFirstName(){
         return firstName.get();
     }
 
 
-
-    @Override
     public void initialize(URL location, ResourceBundle resources) {
         studyYearField.getSelectionModel().selectFirst();
         odsjekField.getSelectionModel().selectFirst();
@@ -81,7 +90,6 @@ public class Controller implements Initializable {
         isValidEmail=false;
         isValidJmbg=false;
         isValidNumber=false;
-
         name.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
@@ -107,7 +115,7 @@ public class Controller implements Initializable {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 isValidJmbg=false;
-                if(newValue.length()==13 && !newValue.matches("\\D+")){
+                if(isValidJmbgDatePlace(newValue,dateField.textProperty().get(),placeField.accessibleTextProperty().get())){
                         isValidJmbg=true;
                 }
 
@@ -121,9 +129,31 @@ public class Controller implements Initializable {
                 }
             }
         });
+        dateField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                dateField.textProperty().set(newValue);
+                isValidBirthday=isValidJmbgDatePlace(jmbgField.textProperty().get(), dateField.textProperty().get(),placeField.accessibleTextProperty().get());
+                if(isValidBirthday){
+                    dateField.getStyleClass().removeAll("dugmeInvalid");
+                    dateField.getStyleClass().add("dugmeValid");
+                }
+                else{
+                    dateField.getStyleClass().removeAll("dugmeValid");
+                    dateField.getStyleClass().add("dugmeInvalid");
+                }
+            }
+        });
+        placeField.accessibleTextProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+
+            }
+        });
     }
 
     public void evaluate(ActionEvent actionEvent) {
-        System.out.println(firstName.get());
+
+        System.out.println(firstName.get()+"  "+surname.textProperty().get());
     }
 }
