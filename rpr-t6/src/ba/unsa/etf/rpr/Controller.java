@@ -30,6 +30,17 @@ public class Controller implements Initializable {
     public RadioButton redovanRadio;
     private SimpleStringProperty firstName;
     private SimpleStringProperty birthPlace;
+    Boolean isValidName;
+    Boolean isValidSurname;
+    Boolean isValidIndex;
+    Boolean isValidJmbg;
+    Boolean isValidBirthday;
+    Boolean isValidBirthplace;
+    Boolean isValidAdress;
+    Boolean isValidNumber;
+    Boolean isValidEmail;
+
+
 
 
     public Controller(){
@@ -61,23 +72,53 @@ public class Controller implements Initializable {
         odsjekField.getSelectionModel().selectFirst();
         ciklusField.getSelectionModel().selectFirst();
         //placeField.getSelectionModel().selectFirst();
+        isValidIndex=false;
+        isValidName=false;
+        isValidSurname=false;
+        isValidAdress=false;
+        isValidBirthday=false;
+        isValidBirthplace=false;
+        isValidEmail=false;
+        isValidJmbg=false;
+        isValidNumber=false;
+
         name.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 firstName.set(newValue);
+                //System.out.println("1234562a891234".matches("\\d{13}"));
                 if(newValue.trim().equals("")){
                     //crvena
-                    System.out.println(newValue+"1234536");
                     name.getStyleClass().removeAll("dugmeValid");
                     name.getStyleClass().add("dugmeInvalid");
+                    isValidName=false;
                 }
                 else
                 {
                     name.getStyleClass().removeAll("dugmeInvalid");
                     name.getStyleClass().add("dugmeValid");
+                    isValidName=true;
                     //zelena
                 }
                 //System.out.println(newValue);
+            }
+        });
+        jmbgField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                isValidJmbg=false;
+                if(newValue.length()==13 && !newValue.matches("\\D+")){
+                        isValidJmbg=true;
+                }
+
+                if(isValidJmbg){
+                    jmbgField.getStyleClass().removeAll("dugmeInvalid");
+                    jmbgField.getStyleClass().add("dugmeValid");
+                }
+                else{
+                    jmbgField.getStyleClass().removeAll("dugmeValid");
+                    jmbgField.getStyleClass().add("dugmeInvalid");
+                }
             }
         });
     }
